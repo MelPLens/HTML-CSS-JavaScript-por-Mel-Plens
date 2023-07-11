@@ -1,0 +1,111 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  background: #e7e7e7;
+  display: grid;
+  gap:60px;/*para distanciar as divs e elementos*/
+  justify-items: center;/*verificar imagem para não ser grande, se não centraliza*/
+  margin-top: 60px;/*distanciar do topo*/
+}
+
+img{
+  max-width:100% ;/*crescer mais que a tela*/
+  display: block;
+}
+
+a{
+  text-decoration: none;
+}
+
+p, h1, h2, h3{
+  margin:0px; /*resetar a margem padrão*/
+}
+p{
+  font-size: 20px; /*tamanho da letra*/
+  line-height:1.3 ;/*distanciar linhas*/
+}
+.menu{
+  display: flex;
+  gap: 20px;
+  flex-wrap:wrap;/*para quebrar quando tiver diminuindo*/
+  justify-content: center;/*mesmo quebrando, sempre vai se manter ao centro*/
+}
+
+.menu a{ /*link dentro de menu*/
+ background: #ffffff;
+ padding: 15px 30px; /* 15 para e para baixo e 30 esquerda r direita*/
+ border-radius: 4px;
+ color: black;
+ text-transform:uppercase ;/*coloca em letra maiuscula*/
+}
+
+.conteudo{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  /*# Tamanhos
+  conteúdo principal: máximo 1000px*/
+  max-width:1000px ; //*o limite do conteudo " tamanho do quadrado*/
+}
+
+.introducao{
+background: #ffffff;
+padding: 40px;/*desgruda elementos da ponta - margem interna*/
+text-align: right;/*texto alinhado a direita*/
+position: relative;/*por causa do detalhe para nao ir ao body */
+display: grid; /* pois estavam inline*/
+align-content: center;/* para conteudos*/
+gap:20px;
+justify-items: end;
+}
+
+.detalhe{
+  width: 60px;
+  height: 4px;
+  background: #ee2211;
+  /*o elemento é span, logo sendo inline, então definindo essas configurações não acontecera nada, logo devemos colocar isso:*/
+  display: inline-block;
+  position: absolute;/*para ficar encima da div e nao influencia os elementos*/
+  top: 30px;
+  right: -30px;/* fica entro o meio*/
+}
+
+.botao{
+  background:#ee2211 ;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.subtitulo{
+  font-size: 64px;
+  text-transform:uppercase;
+  color:rgba(0,0,0,0.2);
+  text-align: right;
+  padding: 40px;
+  align-self: center;
+}
+
+.vantagens{
+  background: white;
+  padding: 40px;
+
+}
+.vantagens-itens{
+  display: grid;
+  grid-template-columns:auto 1fr;/*dividir em 2 colunas , auto para a imagem e 1fr para o p*/
+  gap:10px 20px;/*10 linha e 20 coluna*/
+  padding:20px;
+}
+
+.vantagens-item p{/* para não quebrar e ir na 1 coluna, ficar na 2*/
+  grid-column: 2;
+}
+
+.rodape{
+  background: white;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;/*nao quero que some nao padding e nem border*/
+}
