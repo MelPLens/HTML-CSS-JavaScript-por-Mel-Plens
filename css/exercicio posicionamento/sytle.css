@@ -17,12 +17,24 @@ a{
   text-decoration: none;
 }
 
+ul{
+
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
 p, h1, h2, h3{
   margin:0px; /*resetar a margem padrão*/
 }
 p{
-  font-size: 20px; /*tamanho da letra*/
+  font-size: 1.25rem; /*tamanho da letra*/
   line-height:1.3 ;/*distanciar linhas*/
+}
+.header{
+display: grid;
+justify-items:center ;
+gap: 60px;
+
 }
 .menu{
   display: flex;
@@ -32,12 +44,20 @@ p{
 }
 
 .menu a{ /*link dentro de menu*/
+  display: block;
  background: #ffffff;
- padding: 15px 30px; /* 15 para e para baixo e 30 esquerda r direita*/
+ padding: 1rem 2rem; /* 15 para e para baixo e 30 esquerda r direita*/
  border-radius: 4px;
  color: black;
  text-transform:uppercase ;/*coloca em letra maiuscula*/
+ border: 2px solid #fff;
 }
+
+.menu a:hover{
+  border: 2px solid #e21;
+  /*ou border-color:#900*/
+}
+
 
 .conteudo{
   display: grid;
@@ -54,48 +74,68 @@ text-align: right;/*texto alinhado a direita*/
 position: relative;/*por causa do detalhe para nao ir ao body */
 display: grid; /* pois estavam inline*/
 align-content: center;/* para conteudos*/
-gap:20px;
+gap:1.2rem;
 justify-items: end;
 }
 
-.detalhe{
-  width: 60px;
-  height: 4px;
+.introducao{
+  font-size: 2rem;
+}
+.introducao::before{
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 0.2rem;
   background: #ee2211;
   /*o elemento é span, logo sendo inline, então definindo essas configurações não acontecera nada, logo devemos colocar isso:*/
-  display: inline-block;
+ 
   position: absolute;/*para ficar encima da div e nao influencia os elementos*/
-  top: 30px;
+  top: 1.8rem;
   right: -30px;/* fica entro o meio*/
 }
+
 
 .botao{
   background:#ee2211 ;
   color: white;
-  padding: 15px 30px;
-  border-radius: 4px;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
   text-transform: uppercase;
 }
 
+.botao:hover{
+  background:#900 ;
+}
+
 .subtitulo{
-  font-size: 64px;
+  font-size: 4rem;
   text-transform:uppercase;
   color:rgba(0,0,0,0.2);
   text-align: right;
-  padding: 40px;
+  padding: 2.5rem;
   align-self: center;
+  background-image: url(./05-css-propriedades/0506-refatorar-exercicio/web-final/img/onda.svg);
 }
 
 .vantagens{
   background: white;
-  padding: 40px;
+  padding: 2.5rem;
 
 }
-.vantagens-itens{
+.vantagens-item{
   display: grid;
   grid-template-columns:auto 1fr;/*dividir em 2 colunas , auto para a imagem e 1fr para o p*/
-  gap:10px 20px;/*10 linha e 20 coluna*/
-  padding:20px;
+  gap:0.6rem 1.2rem;/*10 linha e 20 coluna*/
+  padding:1.2rem;
+}
+.vantagens-item:hover{
+  border-left: 4px solid #e21;
+  /*Caso não queira que "pule" cole essa linha no vantagens com a cor branca ou transparent*/
+}
+
+.vantagens-item:nth-child(odd){/*odd: impares*/
+
+  background: #f7f7f7;
 }
 
 .vantagens-item p{/* para não quebrar e ir na 1 coluna, ficar na 2*/
@@ -106,6 +146,6 @@ justify-items: end;
   background: white;
   width: 100%;
   text-align: center;
-  padding: 40px;
+  padding: 2.5rem;
   box-sizing: border-box;/*nao quero que some nao padding e nem border*/
 }
