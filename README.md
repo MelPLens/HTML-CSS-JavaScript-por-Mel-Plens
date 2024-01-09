@@ -1,2 +1,2 @@
-# Html.CSS-Treino
-Neste repositório armazeno todos os exercícios do curso de Front End da Origamid na etapa de html e css para iniciantes.
+# HTML e CSS
+Neste repositório armazeno todos as minhas anotações de estudos de HTML e CSS para ajudar devs iniciantes!.
