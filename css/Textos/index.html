@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textos</title>
+    <style>
+
+p, h1 , li, a, h5,h4{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.underline{
+    text-decoration: underline;
+}
+.line-through{
+    text-decoration: line-through;
+}
+
+.overline{
+    text-decoration: overline;
+}
+code,strong{
+    background-color: rgb(15, 207, 15);
+}
+
+#capitalize{
+    /*text-transform: none;*/
+    text-transform: capitalize;
+}
+#uppercase{
+    text-transform: uppercase;
+}
+#lowercase{
+    text-transform: lowercase;
+}
+
+.exemplo-text-align-right{
+    width: 370px;
+    border: 1px solid black;
+    text-align: right;
+}
+
+.exemplo-text-align-center{
+    width: 370px;
+    border: 1px solid black;
+    text-align: center;
+}
+.exemplo-text-align-justify{
+    width: 370px;
+    border: 1px solid black;
+    text-align: justify;
+}
+.exemplo-text-align-left{
+    width: 370px;
+    border: 1px solid black;
+    text-align: left;
+}
+
+.solid{
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+   
+}
+.double{
+    text-decoration-style: double;
+    text-decoration-line: underline;
+}
+.dotted{
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+}
+.dashed{
+    text-decoration-style: dashed;
+    text-decoration-line: underline;
+}
+.wavy{
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+}
+.solid-color{
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: green;
+}
+.thickness{
+    text-decoration-style: wavy;
+    text-decoration-line: underline;
+    text-decoration-color: green;
+    text-decoration-thickness: 5px;
+}
+.text-decoration-resumida{
+    text-decoration: underline wavy green 5px; 
+}
+.text-indent{
+    text-indent: 10px;
+}
+.letter-spacing{
+letter-spacing: 50px;
+}
+
+.word-spacing{
+word-spacing: 12px;
+}
+    </style>
+</head>
+<body>
+    <h1>Propriedade <code>Text-transform</code></h1>
+    <p>É responsável por definir quais caracteres vão estar em Maiusculo,minusculo, etc.</p>
+    <p id="capitalize"><strong>Capitalize</strong> coloca todas as palavras em maiusculo no começo.</p>
+
+    <p id="uppercase"><strong>uppercase</strong> coloca todas as palavras em caixa alta.</p>
+
+    <p id="lowercase"><strong>lowercase</strong> coloca todas as palavras em minusculo</p>
+
+    <br>
+
+    <h1>Propriedade <code>Text-align</code></h1>
+    <p>É responsável por alinhar o texto no elemento.</p>
+    <br>
+    <code>Left(Esquerda)</code>
+    <p class="exemplo-text-align-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officia consectetur ducimus, eligendi iure modi reprehenderit dignissimos in, quos necessitatibus rem, dicta animi. Iste a, excepturi dignissimos obcaecati repellendus ducimus.</p>
+    <code>Right(Direita)</code>
+    <p class="exemplo-text-align-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officia consectetur ducimus, eligendi iure modi reprehenderit dignissimos in, quos necessitatibus rem, dicta animi. Iste a, excepturi dignissimos obcaecati repellendus ducimus.</p>
+    <code>Center (Centro)</code>
+    <p class="exemplo-text-align-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officia consectetur ducimus, eligendi iure modi reprehenderit dignissimos in, quos necessitatibus rem, dicta animi. Iste a, excepturi dignissimos obcaecati repellendus ducimus.</p>
+    <code>Justify (Justificado)</code>
+    <p class="exemplo-text-align-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error officia consectetur ducimus, eligendi iure modi reprehenderit dignissimos in, quos necessitatibus rem, dicta animi. Iste a, excepturi dignissimos obcaecati repellendus ducimus.</p>
+<br>
+
+    <h1>Propriedade <code>Text-decoration</code></h1>
+    <p>Adiciona ou remove linhas no texto, sejam em cima,no meio ou embaixo.</p>
+    <br>
+    <p>É uma propriedade abreviada de:</p>
+    <ul>
+       <li>text-decoration-line</li>
+       <li>text-decoration-style</li> 
+       <li>text-decoration-color</li>
+       <li>text-decoration-thickness</li><br>
+
+       <a href="">Link de Exemplo</a>
+    </ul>
+    <h1>Exemplos <code>text-decoration-line</code></h1>
+    <p class="underline">Underline</p>
+    <p class="line-through">line-through</p>
+    <p class="overline">overline</p>
+    <p class="none">none</p>
+
+    <br>
+    <h1>Exemplos <code>text-decoration-style</code></h1>
+    <h5>Iriemos deixar o underline para exemplo:</h5>
+    <p class="solid">solid</p>
+    <p class="double">double</p>
+    <p class="dotted">dotted</p>
+    <p class="dashed">dashed</p>
+    <p class="wavy">wavy</p>
+<br>
+    <h1>Exemplos <code>text-decoration-color</code></h1>
+    <p class="solid-color">solid</p>
+
+    <br>
+    <h1>Exemplos <code>text-decoration-thickness</code></h1>
+    <h5>Espessura da linha</h5>
+    <p class="thickness">text-decoration-thickness</p>
+
+    <br>
+    <h1>Exemplos <code>text-decoration-resumida</code></h1>
+    <h5>Espessura da linha</h5>
+    <p class="text-decoration-resumida">text-decoration-resumida</p>
+<br><br>
+
+<h1>Propriedade <code>text-indent</code></h1>
+<p>Define o recuo da primeira linha do texto:</p>
+<h4>Exemplo</h4>
+<p class="text-indent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis libero ab nulla, magnam inventore, cum quas sed suscipit accusantium recusandae labore, eligendi beatae aut! Cupiditate doloremque eos natus quas est.</p>
+
+<br><br>
+
+<h1>Propriedade <code>letter-spacing</code></h1>
+<p >Adiciona espaçamento entre cada <strong>caractere</strong> do texto</p>
+<p id="letter-spacing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto labore, deserunt in natus facilis harum sit nostrum qui et ab dicta perferendis beatae quo voluptate iste eum laudantium autem dolore?</p>
+<br>
+
+<h1>Propriedade <code>word-spacing</code></h1>
+<p id="word-spacing">Adiciona espaçamento entre cada <strong>palavra</strong> do texto</p>
+    <br><br>
+    <h1>Propriedade <code>white-space</code></h1>
+    <p >Define como os espaços em branco do texto de um determinado elemento pe tratado.</p>
+<br><br>
+    <h1>Propriedade <code>word-wrap</code></h1>
+    <p>Define caso uma palavra seja muito linear-gradiente para caber na linha, se ela serpa quebrada ou toda palavra deve ficar na mesma linha.</p>
+    <br><br>
+    <h1>Propriedade <code>writing-mode</code></h1>
+    <p>Define a orientação do texto ( vertical ou horizontal)</p>
+    <strong>Idiomas que são lidas da direita para esquerda, como coreano e chines.</strong>
+<br>
+    <h1>Propriedade <code>test-overflow</code></h1>
+    <p>Define como vamos mostrar ao usuario que há mais conteudo no texto alem do que ele pode visualizar naquele momento.</p>
+</body>
+
+</html>

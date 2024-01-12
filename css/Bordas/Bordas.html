@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .exemplo-width{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+            border-width: 10px;
+        }
+
+        .exemplo-widththin{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .exemplo-style-solid{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+        }
+
+        .exemplo-style-dashed{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: dashed;
+        }
+
+        .exemplo-style-dotted{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: dotted;
+        }
+        .exemplo-style-double{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: double;
+        }
+        .exemplo-style-groove{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: groove;
+        }
+
+        .exemplo-style-ridge{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: ridge;
+        }
+
+        .exemplo-style-inset{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: inset;
+        }
+
+        .exemplo-style-outset{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: outset;
+        }
+
+        .exemplo-style-mista{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: dotted dashed solid double;
+        }
+        .exemplo-bordercolor-unico{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+            border-width: 10px;
+            border-color: purple;
+        }
+
+        .exemplo-bordercolor-misto{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+            border-width: 10px;
+            border-color: purple greenyellow coral blue;
+        }
+
+        .Propriedade-border-tradicional{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border: 10px solid purple;
+        }
+
+        .Propriedade-border-bottom{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-bottom: 10px solid purple;
+        }
+        .Propriedade-border-left{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-left: 10px solid purple;
+        }
+
+        .Propriedade-border-right{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-right: 10px solid purple;
+        }
+        .Propriedade-border-top{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-top: 10px solid purple;
+        }
+
+        .border-radius-tradicional{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+        }
+
+        .border-radius-mista{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px 10px 30px 50px;
+        }
+
+        .border-radius-oval{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px;
+            border-radius: 50px/100px;
+        }
+
+        .border-radius-circulo{
+            background-color: palevioletred;
+            width: 200px;
+            height: 200px; width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        .exemplo{
+            background-color: black;
+            width: 200px;
+            height: 200px;
+            border: 30px solid;
+        }
+
+        #exemplo-1{
+            border-image-source:url("html.jpg");
+        }
+
+        #exemplo-2{
+            border-image-source: linear-gradient(red, blue);
+        }
+        #exemplo-3{
+            border-image-source:linear-gradient(red, blue);
+            border-image-repeat: repeat;
+            border-image-slice: 99;
+        }
+
+        #exemplo-4{
+            border-image-source:linear-gradient(red, blue);
+            border-image-repeat: repeat;
+            border-image-slice: 99;
+            border-image-width: 10px 20px;
+        }
+
+        #exemplo-5{
+            border-image-source:url("estrelaa.jpg");
+            border-image-repeat: stretch;
+            border-image-slice: 88;
+        }
+        #exemplo-6{
+            border-image-source:url("estrelaa.jpg");
+            border-image-repeat: round;
+            border-image-slice: 95;
+        }
+        #exemplo-7{
+            border-image-source:url("estrelaa.jpg");
+            border-image-repeat: round;
+            border-image-slice: 95;
+            border-image-outset: 30px;
+        }
+        #exemplo-8{
+            border-image:url(estrelaa.jpg) 169 /10px/ 1 round;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Bordas</h1>
+    <p>Tipos de bordas:</p>
+
+    <ul>
+        <strong><li>border-width</li></strong>
+        <strong><li>border-style</li></strong>
+        <strong><li>border-color</li></strong>
+    </ul>
+
+    <h1>Tamanho de borda : Border-width</h1><br>
+    <code>border-width: 10px</code>
+    <div class="exemplo-width"></div>
+
+    <!--Borda fina ou 1 px, medium e thick(grosso) ou 10px na horizontal e 20px na vertical-->
+    <code>border-width: thin</code>
+    <div class="exemplo-widththin"></div>
+
+    <br>
+
+    <h1>Estilo de Borda : Border-Style</h1>
+    <code>border-style : solid</code>
+    <div class="exemplo-style-solid"></div>
+
+    <code>border-style : dashed</code>
+    <div class="exemplo-style-dashed"></div>
+
+    <code>border-style : dotted</code>
+    <div class="exemplo-style-dotted"></div>
+
+    <code>border-style : double</code>
+    <div class="exemplo-style-double"></div>
+
+    <code>border-style : groove</code>
+    <div class="exemplo-style-groove"></div>
+
+    <code>border-style : ridge</code>
+    <div class="exemplo-style-ridge"></div>
+
+    <code>border-style : inset</code>
+    <div class="exemplo-style-inset"></div>
+
+    <code>border-style : outset</code>
+    <div class="exemplo-style-outset"></div>
+
+    <code>border-style : mista</code>
+    <div class="exemplo-style-mista"></div>
+
+    <br>
+
+    <h1>Cor da Borda : Border-Color (Cor Unica)</h1>
+    <div class="exemplo-bordercolor-unico"></div>
+
+    <h1>Cor da Borda : Border-Color (Misto)</h1>
+    <div class="exemplo-bordercolor-misto"></div>
+
+    <br>
+
+    <h1>Propriedade Border</h1>
+    <code>Servindo como atalhos dos três tipos de bordas.</code><br>
+
+    <div class="Propriedade-border-tradicional"></div>
+
+    <code>Border bottom :</code><br>
+    <div class="Propriedade-border-bottom"></div>
+
+    <code>Border left (esquerdo) :</code><br>
+    <div class="Propriedade-border-left"></div>
+
+    <code>Border right (direito) :</code><br>
+    <div class="Propriedade-border-right"></div>
+
+    <code>Border top (topo) :</code><br>
+    <div class="Propriedade-border-top"></div>
+
+    <br>
+
+    <h1>Arredondamento das bordas</h1>
+    <br>
+    <code>Borda Tradicional com 20px</code>
+    <div class="border-radius-tradicional"></div><br>
+
+    <code>Borda Mista 20px 10px 30px 50px</code>
+    <div class="border-radius-mista"></div><br>
+
+    <code>Borda Oval 50px/100px</code>
+    <div class="border-radius-oval"></div>
+    <br>
+    <code>Borda Circulo 50%</code>
+    <div class="border-radius-circulo"></div>
+
+    <br>
+
+    <h1>Borda com Imagens</h1>
+    <ul>
+        <li>Border-image-source</li>
+        <li>Border-image-width</li>
+        <li>Border-image-repeat</li>
+        <li>Border-image-outset</li>
+        <li>Border-image-slice</li>  
+    </ul>
+
+    <h2>Exemplo</h2>
+    <code>border-image-source:url</code>
+    <div id="exemplo-1" class="exemplo"></div>
+
+    <br>
+    
+    <code>border-image-source: linear-gradient</code>
+    <div id="exemplo-2" class="exemplo"></div>
+    <br>
+    <code>border-image-slice</code>
+    <div id="exemplo-3" class="exemplo"></div>
+    
+    <br>
+    <code>border-image-width</code>
+    <div id="exemplo-4" class="exemplo"></div>
+
+    <br>
+    <code>border-image-repeat : stretch</code>
+    <div id="exemplo-5" class="exemplo"></div>
+
+    <br>
+    <code>border-image-repeat : round</code>
+    <div id="exemplo-6" class="exemplo"></div>
+
+    <br>
+    <code>border-image-outset</code>
+    <div id="exemplo-7" class="exemplo"></div>
+
+    <br>
+    <code>border-image : Resumindo</code>
+    <div id="exemplo-8" class="exemplo"></div>
+
+
+</body>
+</html>

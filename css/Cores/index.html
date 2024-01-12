@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores</title>
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+color: deeppink;
+}
+#pre-definidas{
+color: deeppink;
+}
+
+/*li,p{
+background-color: deeppink;
+}*/
+
+#currente-color{
+    background-color: transparent;
+    color: orange;
+    border: 2px solid currentColor;
+}
+
+#rgb{
+    color:rgb(0,55,0);
+}
+
+#red{
+    color: red;   
+}
+
+#green{
+    color: green;
+}
+
+#blue{
+
+color: blue;
+}
+#hex{
+    color:#00ffff; /*dois 0 no final para transparencia*/
+}
+
+#hsl{
+    color:hsl(45, 100%, 80%)
+}
+
+</style>
+</head>
+<body>
+    <h1>Cores</h1>
+    <p>Varias formas de definirmos as cores</p>
+    <ul>
+        <li id="pre-definidas"> Cores pré-definidas</li>
+        <p>Existe mais de 140 cores pre-definidas para usar neste site : <a href="https://www.w3schools.com/colors/colors_names.asp">Clique aqui para ver mais cores</a></p>
+        <li id="currente-color">Currente-color</li>
+        <li id="hex">Hexadecimal</li>
+        <li id="hex-transparencia">Hex-transparencia</li>
+        <li id="rgb">RGB</li>
+        <p> Sua estrutura : color:rgb(<p id="red">red,</p><p id="green">green,</p><p id="blue">blue</p>);</p>
+        <li id="hsl">HSL</li>
+        <li id="hsla">HSLA</li>
+
+    </ul>
+</body>
+</html>

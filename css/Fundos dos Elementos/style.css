@@ -1,0 +1,23 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: deeppink;
+}
+
+.exemplo-gradiente{
+    width: 300px;
+    height: 300px;
+    background-color: palevioletred;
+    background-image: linear-gradient(lightpink,palevioletred);
+}
+
+.exemplo-mesclagem{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    color:white;
+    padding: 30px;
+    font-size: 40px;
+    font-weight: 900;
+    background-image: url("html.jpg");
+    background-blend-mode:luminosity;
+}
