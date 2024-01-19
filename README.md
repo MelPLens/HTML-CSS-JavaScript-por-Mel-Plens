@@ -1,5 +1,5 @@
 # HTML e CSS
-Neste repositório armazeno todos as minhas anotações de estudos de HTML e CSS para ajudar devs iniciantes!.
+Neste repositório armazeno todos as minhas anotações de estudos de HTML e CSS para ajudar devs iniciantes !
 
 ## Dica
 Abrir o *vs code editor online* apenas clicando na tecla "." do seu notebook ou computador.
