@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducao</title>
+</head>
+<style>
+    h1,
+    p,
+    code {
+        text-align: left;
+        margin-left: 60px;
+    }
+
+
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+
+        margin-top: 35px;
+        background-color: rgb(116, 63, 165);
+        color: white;
+        font-size: 30px;
+    }
+
+    .img_media {
+        max-width: 100%;
+        display: block;
+        padding: 50px;
+    }
+
+    .exercicio_media {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /*Faz coluna*/
+        gap: 2em;
+
+    }
+
+    .Exercicio_Grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+    .img_grid {
+        max-width: 100%;
+        display: block;
+    }
+
+    h1 {
+        grid-column: 1/-1;
+    }
+
+    @media(max-width:600px) {
+
+        /*abaixo de 600px*/
+        .exercicio_media {
+            grid-template-columns: 1fr;
+            border: 50px;
+        }
+
+        h1 {
+            background-color: aliceblue;
+            border-radius: 5px;
+            color: blueviolet;
+            padding: 5px;
+        }
+    }
+
+    @media(min-width:1000px), (max-width:500px) {
+
+        /* min acima de 600px*and tambem separa  */
+        h1 {
+            background-color: rgba(255, 235, 205, 0.499);
+            color: blueviolet;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .img_objectfit {
+        max-width: 100%;
+        display: block;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .cover .img_objectfit {
+        height: 100%;
+        object-fit: cover; /*Corta a img para caber no conteudo*/
+        object-position: top left;/*corta a direita*/
+    }
+    .grid_max{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        max-width: 900px;
+        /*Alinha ao centro */
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    .img_max{
+        max-width: 100%;
+        display: block;
+    }
+    .cover_max .img_max {
+        height: 100%;
+        object-fit: cover; /*Corta a img para caber no conteudo*/
+        object-position: top left;/*corta a direita*/
+    }
+    .p_max{
+        max-width:60ch ;
+    }
+    .texto_max{
+        align-self: center;
+    }
+</style>
+
+<body>
+
+    <h1 style="font-size: 60px;">Introdução</h1>
+    <p style="font-size: 35px; color: rgba(240, 248, 255, 0.425);"> Layout Responsivo se adapta a diferentes tipos de
+        tamanhos de telas do usuário.</p>
+    <h1>Tamanho</h1>
+    <p>Unidades Relativas como %,vw,fr</p>
+    <h1>Media Queries</h1>
+    <p>Codigo sera ativado de acordo com o tamanho da tela</p>
+    <h1>Flexbox e Grid</h1>
+    <p>Manipula o flexbox e grid adaptar</p>
+    <h1>Tipo de Tela</h1>
+    <p>Temos que levar a operação do usuário com apenas um dedo.</p>
+
+    <h1>Meta viewport</h1>
+    <p>Garante que o HTMl e CSS lide de forma correta com as telas de alta densidade. Ela normaliza o PX do css:</p>
+    <code
+        style="color: rgba(255, 228, 196, 0.386);">meta name="viewport" content="width= device-width, initial-scale=1"</code>
+    <h1>Medias Queries</h1>
+    <p>Exemplo</p>
+    <div class="exercicio_media">
+        <h1>Nossos Amigurumis</h1>
+        <img class="img_media" src="../images/passaro.jpg" alt="Descrição da Imagem">
+        <p>Verificar o style:</p>
+        <p>colocado nas tags img,div h1 e media queries</p>
+    </div>
+
+    <h1>@Medias na prática</h1>
+    <p>Max-width : Abaixo de tal px.</p>
+    <p>Min-width : Acima de tal px.</p>
+    <p>ordem ou grid row para mudar a ordem da linha do obj</p>
+
+
+    <h1>Grid</h1>
+    <div class="Exercicio_Grid">
+        <h1>Nossos Amigurumis</h1>
+        <img class="img_grid" src="../images/passaro.jpg" alt="Descrição da Imagem">
+        <p>Verificar o style:</p>
+
+    </div>
+    <div class="galeria">
+        <img src="../images/passaro.jpg" alt="Descrição da Imagem">
+        <img src="../images/passaro.jpg" alt="Descrição da Imagem">
+        <img src="../images/passaro.jpg" alt="Descrição da Imagem">
+      
+
+
+    </div>
+
+    <h1>Object Fit</h1>
+    <div class="grid">
+        <div class="cover">
+            <img class="img_objectfit" src="../images/MascoteApraxia.png" alt="Bicho">
+        </div>
+        <div class="texto">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis corporis libero natus assumenda
+                repudiandae odit facere nobis recusandae, et reprehenderit. Fugit id fugiat praesentium earum numquam
+                nobis pariatur blanditiis sequi.</p>
+        </div>
+    </div>
+ <h1>Max-Width</h1>
+ 
+ <p>determina um valor maximo de largura do elemento. Não deixe os elementos livres na tela, principal os textos.</p>
+ <h1>ch</h1>
+ <p>Unidade relacionada a largura do caractere 0 da tipografia</p>
+ <h1>Largura do Texto</h1>
+ <p>Controlar o tamanho máximo da largura do texto é essencial para garantir boa leitura</p>
+ <p>Para corpo de texto de 50-75 caracteres é o ponto ideal.</p>
+ <h1>Margin:0auto</h1>
+ <p>margin top e bottom 0.margin left e rifht auto (automatica,define valores iguais com base no espaço em branco e alinha o conteudo ao centro).</p>
+ <div class="grid_max">
+    <h1>Usando max-widht:960px;</h1>
+    <div class="cover_max">
+        <img class="img_max" src="../images/MascoteApraxia.png" alt="Bicho">
+    </div>
+    <div class="texto_max">
+        <p class="p_max">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p class="p_max">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis corporis libero natus assumenda
+            repudiandae odit facere nobis recusandae, et reprehenderit. Fugit id fugiat praesentium earum numquam
+            nobis pariatur blanditiis sequi.</p>
+            <code>/*Alinha ao centro */
+                margin-left: auto; <br>
+                margin-right: auto;</code>
+    </div>
+</div> 
+</body>
+
+
+</html>

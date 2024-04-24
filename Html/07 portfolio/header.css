@@ -1,0 +1,39 @@
+.header{
+    max-width: 1200px; /* 1200px é o tamanho do container */
+    margin: 0 auto;  /*Centraliza o container */
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    /* Margin para desgrudar elementos do topo */
+    padding: 30px 20px; /* Padding para distanciar o header do topo , 30 para cima e baixo e 20 do lado */
+}
+
+.header_logo{
+    margin: 5px;
+}
+/* Cada li ficar uma do lado da outra */
+.header_menu{
+    display: flex;
+    flex-wrap: wrap; /* Se não tiver espaço, ele vai quebrar a linha */
+    gap: 10px;
+    justify-content: center;
+}
+
+.header_menu a {
+    font-size: 1.125rem;
+    line-height:1.3;
+    padding: 10px 20px;
+    background-color: #E85A72;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 15px;
+    display: block;  /* Para que o link fique dentro do botão */
+}
+
+@media(max-width:500px){
+    .header{
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+}
